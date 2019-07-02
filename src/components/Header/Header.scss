@@ -1,0 +1,51 @@
+
+// headline: Coding A Navbar In 7 Simple Steps With Flexbox
+// from: https://www.youtube.com/watch?v=hn7MNdfn10k
+
+h2.header {
+  color: greenyellow;
+}
+
+
+.header {
+  //width: 970px;  
+  height: 51px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;  
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header>h2 {
+  flex-basis: 10%;
+}
+
+.header>h2>a {
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.3px;
+  font-size: 20px;
+  color: #888;  
+}
+
+.header ul {
+  display: flex;
+}
+
+.header ul li a {
+  padding: 10px;  
+  font-size: 15px;
+  color: red;
+}
+
+.header ul li:nth-child(1)>a { color: #2ecc71; }
+.header ul li:nth-child(2)>a { color: #e74c3c; }
+.header ul li:nth-child(3)>a { color: #3498db; }
+.header ul li:nth-child(4)>a { color: #f39c12; }
+

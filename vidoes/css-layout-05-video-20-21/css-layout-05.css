@@ -1,0 +1,123 @@
+/* Layout Section ------------------------------------------------------------------------ */
+body {
+  background: #9c9f84;
+  margin: 0;
+  font-family: Verdana, Georgia, serif;
+  font-size: 14px;
+}
+
+#container {
+  width: 968px;
+  margin: 0px auto; /* stick the container in the center*/
+}
+
+/* need to calculate all the height and width, width = 968 - 2 * border pixels */
+.header {
+  background-color: #5c755e;
+  height: 75px;
+  width: 964px;
+  border: solid 2px #000;
+  color: white
+}
+
+#nav {
+  background: black;
+  height: 30px;
+  width: 964px;
+  border: solid 2px #000;
+  font-weight: bold;
+}
+
+.sidebar {
+  float: left;
+  background: #9c9f84;
+  width: 176px;
+  height: 790px;
+  border-left: solid 2px #000;
+  border-bottom: solid 2px #000;
+  border-bottom-left-radius: 1em;
+}
+
+.main {
+  float: left;
+  width: 786px;
+  height: 790px;
+  background: #e5e4d7;   
+  border-right: solid 2px #000;
+  border-left: solid 2px #000;
+  border-bottom: solid 2px #000;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  overflow: auto;
+  border-bottom-right-radius: 1em;  
+}
+
+#box {
+  background-color: #4e5a65;
+  border: 2px solid #000;
+  border-radius: 1em;
+  font-size: 95%;
+  padding: 0px;
+  margin: 20px;
+  width: 280px;
+  text-align: center;
+  color: white;
+}
+
+/* the default display for image is inline */
+.boximage {
+  display: block;   /* convert to block*/
+  text-align: center;
+}
+
+/*
+ * expend the image to 80% of the size of the header
+ * max-height: 100%;
+ * max-width: 100%;     
+ */
+.logo {  
+  /* float: right; stick it to the left */
+  display: block;  
+  /* float: right;   */
+  
+  /* center the image by
+   * margin-left: auto; 
+   * margin-right: auto; 
+   */
+   margin-left: auto;
+   margin-right: auto;
+
+ /* expend the image to 100% of the size of the header
+  * max-height: 100%;
+  * max-width: 100%;     
+  */
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/*
+ * max-width: if max-width display LESS then 600px then activate this media query
+ */
+@media (max-width: 600px) {
+.sidebar {
+  display: none;
+}
+
+.logo {
+  float: left;  
+}
+
+#box {
+  background-color: darkred;
+}
+}
+
+/*
+ * max-width: if max-width display LESS then 400px then activate this media query
+ */
+@media (max-width: 500px) {
+#box {
+  background-color: darkgreen;
+}
+}
+/* ----------------------------------------------------------------------------------------- */

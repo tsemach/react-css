@@ -1,0 +1,18 @@
+
+#main {  
+  display: flex; 
+  margin: 0 auto;
+  height:100%;
+
+  // align-items: stretch;
+  // justify-content: flex-start; 
+  align-content: stretch; 
+}
+
+.searchbar-and-note {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
