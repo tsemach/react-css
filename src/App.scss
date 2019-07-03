@@ -1,70 +1,113 @@
 
-//=======================================================================================================
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-$is_reset: false;
-
-@if $is_reset {
-	html, body, div, span, applet, object, iframe,
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var,
-	b, u, i, center,
-	dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td,
-	article, aside, canvas, details, embed, 
-	figure, figcaption, footer, header, hgroup, 
-	menu, nav, output, ruby, section, summary,
-	time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
-
-	/* HTML5 display-role reset for older browsers */
-	article, aside, details, figcaption, figure, 
-	footer, header, hgroup, menu, nav, section {
-		display: block;
-	}
-	body {
-		line-height: 1;
-	}
-	ol, ul {
-		list-style: none;
-	}
-	blockquote, q {
-		quotes: none;
-	}
-	blockquote:before, blockquote:after,
-	q:before, q:after {
-		content: '';
-		content: none;
-	}
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
-}
-//=======================================================================================================
-
-// $color: blueviolet;
-
-// h1 {
-//   background-color: $color;
+// .header-container {
+//     background-color: cadetblue;
+//     height: 5%;
+//     text-align: center;
+//     display: flex;
 // }
 
-// @import "more.scss"
+// .header {
+//     margin: auto;
+// }
 
+.sidebar-main-container {
+    height: 95%;
+    display: flex;
+    align-content: stretch;    
+}
 
+// .sidebar {
+//     background-color:lightgreen;
+//     flex-basis: 10%; 
+// 		text-align: center;   
+// }
 
+// .main {
+//     background-color: aquamarine;    
+//     flex-basis: 90%; 
+//     display: flex;
+//     flex-direction: column;
+// }
 
+// .searchbar-container {
+// 	background-color:red;
+// 	flex-basis: 3%;
+// 	display: flex;
+// }
+
+// .searchbar {
+// 	margin: auto;
+// 	text-align: center;
+// }
+
+// .code-note-container {
+//     background-color: darkblue;
+//     flex-basis: 97%;    
+//     display: flex;    
+//     overflow-y: auto;
+//     overflow-x: hidden;
+// }
+
+// .code {
+//     background-color:steelblue;
+//     flex: 1; 
+//     /* flex-basis: 2%; */
+// }
+
+// .note {
+//     background-color: darkolivegreen;
+//     flex: 1;
+//     /* flex-basis: 2%; */
+//     font-size: 2em;
+// }
+
+// .scrollable {
+//     overflow-y: auto;
+//     overflow-x: hidden;
+// }
+
+.main {
+    background-color: aquamarine;    
+    flex-basis: 90%; 
+    display: flex;
+    flex-direction: column;
+}
+
+// .searchbar-container {
+//     background-color:red;
+//     flex-basis: 3%;
+//     display: flex;
+// }
+
+// .searchbar {
+//     margin: auto;
+//     text-align: center;
+// }
+
+.code-note-container {
+    background-color: darkblue;
+    flex-basis: 97%;    
+    display: flex;    
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.code {
+    background-color:steelblue;
+    flex: 1; 
+    /* flex-basis: 2%; */
+}
+
+.note {
+    background-color: darkolivegreen;
+    flex: 1;
+    /* flex-basis: 2%; */
+    font-size: 2em;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 

@@ -14,9 +14,9 @@ html, body {
     margin: auto;
 }
 
-.app {
-    height:95%;
-    display:flex;
+.sidebar-main-container {
+    height: 95%;
+    display: flex;
     align-content: stretch;    
 }
 
@@ -32,13 +32,13 @@ html, body {
     flex-direction: column;
 }
 
-.search-bar-container {
+.searchbar-container {
     background-color:red;
     flex-basis: 8%;
     display: flex;
 }
 
-.search-bar {
+.searchbar {
     margin: auto;
     text-align: center;
 }

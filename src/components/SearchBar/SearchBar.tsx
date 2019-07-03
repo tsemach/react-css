@@ -22,18 +22,13 @@ class SearchBar extends React.Component<SearchBarPropsType, SearchBarStateType> 
     ];
 
     return (  
-      <div className="searchbar">
-        <form action="">
-          <div>
-            <input className="form-input"
-              placeholder="Search for..."
-              // value={'sdvsdv'}
-              onChange={this.handleInputChange}
-            />
-          </div>
-        </form>
-      </div>      
-    );
+        
+<div className="searchbar-container">
+              <div className="searchbar">
+                Example-05: SEARCH-BAR            
+              </div>
+            </div>   
+             );
   }
 }
  

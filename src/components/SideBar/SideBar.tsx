@@ -8,7 +8,8 @@ class SideBar extends React.Component<SideBarProps, SideBarState> {
   render() { 
     return (
       <div className='sidebar'>
-        <h1>Side Bar</h1>        
+        <h1>Side Bar</h1> 
+        Example-05: SEARCH-BAR        
       </div>
     );
   }

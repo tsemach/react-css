@@ -1,18 +1,18 @@
 
-#main {  
-  display: flex; 
-  margin: 0 auto;
-  height:100%;
-
-  // align-items: stretch;
-  // justify-content: flex-start; 
-  align-content: stretch; 
+.main {
+    background-color: aquamarine;    
+    flex-basis: 90%; 
+    display: flex;
+    flex-direction: column;
 }
 
-.searchbar-and-note {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.submenu1-submenu2-container {
+    background-color: darkblue;
+    flex-basis: 97%;    
+    display: flex;    
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
+
 

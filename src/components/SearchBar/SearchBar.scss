@@ -1,21 +1,10 @@
-.searchbar {  
-  background-color: chocolate;
-  flex: 1;
 
+.searchbar-container {
+    background-color:red;
+    flex-basis: 3.5%;
+    display: flex;
 }
-
-/* Example-01 --------------------------------------------------------------------*/
-.form-row {
-  padding: 10px 0;
-
-  /* flex needs to define on the parent container so it can handle its childrens */
-  display: flex;  
-  justify-content: center;
+.searchbar {
+    margin: auto;
+    text-align: center;
 }
-
-.form-input {  
-  height: 2em;  
-  width: 100%;  
-}
-/*--------------------------------------------------------------------------------*/
-

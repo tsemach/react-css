@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import SideBar from '../../components/SideBar';
 import SearchBar from '../../components/SearchBar';
-import Note from '../../components/Note'
+import SubMenu1 from '../../components/SubMenu1';
+import SubMenu2 from '../../components/SubMenu2'
 
 import MainPropsType from './types/MainProps.type';
 import MainStateType from './types/MainState.type';
@@ -10,16 +10,14 @@ import './Main.scss';
  
 class Main extends React.Component<MainPropsType, MainStateType> {  
   render() {    
-    return (  
-      <div id="main">
-        <SideBar></SideBar>     
-        <div className="searchbar-and-note">
-          <SearchBar/>
-          <Note/>
-        </div>
+    return (        
+      <div className="main">            
+        <SearchBar/>
+        <div className="submenu1-submenu2-container">
+          <SubMenu1/>
+          <SubMenu2/>
+        </div>        
       </div>
-
-
     );
   }
 }
