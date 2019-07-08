@@ -1,8 +1,9 @@
 import * as React from 'react';
 
+import SideBar from '../../components/SideBar';
 import SearchBar from '../../components/SearchBar';
-import SubMenu1 from '../../components/SubMenu1';
-import SubMenu2 from '../../components/SubMenu2'
+import Coder from '../../components/Coder';
+import Note from '../../components/Note'
 
 import MainPropsType from './types/MainProps.type';
 import MainStateType from './types/MainState.type';
@@ -13,9 +14,9 @@ class Main extends React.Component<MainPropsType, MainStateType> {
     return (        
       <div className="main">            
         <SearchBar/>
-        <div className="submenu1-submenu2-container">
-          <SubMenu1/>
-          <SubMenu2/>
+        <div className="code-note-container">
+          <Coder code="num = num + 1" language="javascript  "/>
+          <Note/>
         </div>        
       </div>
     );

@@ -1,19 +1,8 @@
 
-// .header-container {
-//     background-color: cadetblue;
-//     height: 5%;
-//     text-align: center;
-//     display: flex;
-// }
-
-// .header {
-//     margin: auto;
-// }
-
 .sidebar-main-container {
     height: 95%;
     display: flex;
-    align-content: stretch;    
+    // align-content: stretch;    
 }
 
 // .sidebar {
@@ -66,12 +55,12 @@
 //     overflow-x: hidden;
 // }
 
-.main {
-    background-color: aquamarine;    
-    flex-basis: 90%; 
-    display: flex;
-    flex-direction: column;
-}
+// .main {
+//     background-color: aquamarine;    
+//     flex-basis: 90%; 
+//     display: flex;
+//     flex-direction: column;
+// }
 
 // .searchbar-container {
 //     background-color:red;
@@ -84,30 +73,30 @@
 //     text-align: center;
 // }
 
-.code-note-container {
-    background-color: darkblue;
-    flex-basis: 97%;    
-    display: flex;    
-    overflow-y: auto;
-    overflow-x: hidden;
-}
+// .code-note-container {
+//     background-color: darkblue;
+//     flex-basis: 97%;    
+//     display: flex;    
+//     overflow-y: auto;
+//     overflow-x: hidden;
+// }
 
-.code {
-    background-color:steelblue;
-    flex: 1; 
-    /* flex-basis: 2%; */
-}
+// .code {
+//     background-color:steelblue;
+//     flex: 1; 
+//     /* flex-basis: 2%; */
+// }
 
-.note {
-    background-color: darkolivegreen;
-    flex: 1;
-    /* flex-basis: 2%; */
-    font-size: 2em;
-}
+// .note {
+//     background-color: darkolivegreen;
+//     flex: 1;
+//     /* flex-basis: 2%; */
+//     font-size: 2em;
+// }
 
-.scrollable {
-    overflow-y: auto;
-    overflow-x: hidden;
-}
+// .scrollable {
+//     overflow-y: auto;
+//     overflow-x: hidden;
+// }
 
 

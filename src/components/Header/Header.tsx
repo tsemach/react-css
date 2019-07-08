@@ -11,14 +11,22 @@ const Header = () => {
     // </div>  
 
     <div className="header-container">      
-        <h2 className="header"><a href="#">React CSS/SCSS</a></h2>
-        {/* <ul>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">My Projects</a></li>
-          <li><a href="#">Search</a></li>
-          <li><a href="#">Contect</a></li>                                           
-        </ul>       */}
+      <h2 className="header-title"><a href="#">React CSS/SCSS</a></h2>
+      <div className="header-navbar">
+        <ul>
+          <li><a href="#">Open</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Save</a></li>
+          <li><a href="#">Delete</a></li>                                           
+        </ul>      
       </div>
+      <ul>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">My Projects</a></li>
+        <li><a href="#">Search</a></li>
+        <li><a href="#">Contect</a></li>                                           
+      </ul>      
+    </div>
     
 
 

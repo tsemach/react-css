@@ -21,14 +21,13 @@ class SearchBar extends React.Component<SearchBarPropsType, SearchBarStateType> 
       'typescript'
     ];
 
-    return (  
-        
-<div className="searchbar-container">
-              <div className="searchbar">
-                Example-05: SEARCH-BAR            
-              </div>
-            </div>   
-             );
+    return (          
+      <div className="searchbar-container">
+        <div className="searchbar">
+          Example-05: SEARCH-BAR            
+        </div>
+      </div>   
+    );
   }
 }
  
