@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-import Header from './components/Header'
+import Header from './components/Header';
 import SideBar from './components/SideBar';
 import Main from './containers/Main';
 

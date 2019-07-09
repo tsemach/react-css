@@ -4,8 +4,8 @@
 
 .header-container {  
   background-color: cadetblue;
-  height: 51px;
-  display: flex;
+  height: 51px;  
+  display: flex;  
   justify-content: space-around;
   align-items: center;
 
@@ -21,6 +21,46 @@
     }
   }
 
+  .header-navbar {
+    background-color: darkgreen;  
+    font-size: 1.2em;
+    font-weight: bold;
+    flex-basis: 15%;
+
+    padding: 0;
+    margin: 0;    
+    display: flex;        
+    justify-content: space-around;
+    align-items: center;
+    // margin: auto 0px;
+    height: 100%;
+
+    li {
+      list-style-type: none;  
+
+      >a {
+        background-color: #e7e7e7;
+        text-decoration: none;
+        border-radius: 5px;
+        
+        // border: 1px solid;
+        padding: 1px 5px;
+        border-color: #3498db;
+        font: 400 16px helvetica;
+        font-size: 1em;
+        // margin: 10px;
+        box-sizing: border-box;
+        color: blue;  
+
+        &:hover {
+          color: black;
+          background-color: darkgrey;
+          border-color: #2ecc71;
+        }
+      }      
+    }   
+  }
+  
   .header-menu {
     display: flex;  
 
@@ -38,46 +78,5 @@
       text-decoration: none;
     }  
   }
-  
-  // header-navbar style
-  .header-navbar {
-    background-color: darkgreen;  
-    font-size: 1.2em;
-    font-weight: bold;
-    flex-basis: 15%;
     
-    // padding: 0px;  
-  }
-
-  .header-navbar {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;      
-    display: flex;    
-    justify-content: space-around;
-    align-items: center;
-    // margin: auto 0px;
-    height: 100%;
-    
-    li>a {
-      background-color: #e7e7e7;
-      text-decoration: none;
-      border-radius: 5px;
-      
-      // border: 1px solid;
-      padding: 1px 5px;
-      border-color: #3498db;
-      font: 400 16px helvetica;
-      font-size: 1em;
-      // margin: 10px;
-      box-sizing: border-box;
-      color: blue;  
-
-      &:hover {
-        color: black;
-        background-color: darkgrey;
-        border-color: #2ecc71;
-      }
-    }
-  }
 }
