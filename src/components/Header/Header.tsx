@@ -9,8 +9,8 @@ const Header = () => {
     //     Example-05: HEADER
     //   </div>
     // </div>  
-
-    <div className="header-container">      
+    
+    <div className="header-container"> 
       <h2 className="header-title"><a href="#">React CSS/SCSS</a></h2>
       <div className="header-navbar">
         <ul>
@@ -20,7 +20,7 @@ const Header = () => {
           <li><a href="#">Delete</a></li>                                           
         </ul>      
       </div>
-      <ul>
+      <ul className="header-menu">
         <li><a href="#">About Me</a></li>
         <li><a href="#">My Projects</a></li>
         <li><a href="#">Search</a></li>

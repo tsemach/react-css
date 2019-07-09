@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+		"sourcemap": true,
     "jsx": "react",
     "module": "commonjs",
     "noImplicitAny": true,
