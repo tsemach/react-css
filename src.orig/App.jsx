@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import SplitPane from 'react-split-pane';
+import 'react-splitter-layout/lib/index.css';
+
 import './App.scss';
 
 import Header from './components/Header';
@@ -11,8 +14,10 @@ class App extends Component {
       <React.Fragment>    
         <Header/>
         <div className="sidebar-main-container">
-          <SideBar/>
-          <Main/>
+          <SplitPane split="vertical" minSize={50} defaultSize={100}>
+            <SideBar/>
+            <Main/>
+          </SplitPane>
         </div>     
       </React.Fragment>
     );
