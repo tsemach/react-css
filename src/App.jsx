@@ -15,7 +15,7 @@ class App extends Component {
         <Header/>
         <div className="sidebar-main-container">
           <SplitPane split="vertical" minSize={50} defaultSize={100}>
-            <SideBar/>
+            <SideBar className="sizebar"/>
             <Main/>
           </SplitPane>
         </div>     

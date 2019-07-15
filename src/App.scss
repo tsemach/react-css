@@ -6,17 +6,12 @@
 }
    
 .Pane1 {
-  // overflow: auto;
-  // overflow-y: scroll;
   background-color: azure;
+  overflow-y: auto;
 }
 
 .Pane2 {  
   background-color: antiquewhite;
-}
-
-.Pane {
-  overflow-y: auto;
 }
 
 .Resizer {

@@ -4,13 +4,14 @@
     flex-basis: 90%; 
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .code-note-container {
     background-color: darkblue;
     flex-basis: 97%;    
     display: flex;    
-    overflow-y: auto;
-    overflow-x: hidden;
+    // overflow-y: auto;
+    overflow: hidden;
 }
 
