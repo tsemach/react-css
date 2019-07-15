@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import SideBar from '../../components/SideBar';
+import SplitPane from 'react-split-pane';
+
 import SearchBar from '../../components/SearchBar';
 import Coder from '../../components/Coder';
 import Note from '../../components/Note'
@@ -15,8 +16,10 @@ class Main extends React.Component {
       <div className="main">            
         <SearchBar/>
         <div className="code-note-container">
-          <Coder code="num = num + 1" language="javascript  "/>
-          <Note/>
+          <SplitPane split="vertical" minSize={50} defaultSize={100}>
+            <Coder code="num = num + 1" language="javascript  "/>
+            <Note pane2Style={{overflow: "auto"}}/>
+          </SplitPane>
         </div>        
       </div>
     );

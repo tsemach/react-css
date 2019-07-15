@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import Coder from '../Coder'
-
 import './Note.scss';
 
 class Note extends React.Component {
@@ -21,11 +19,61 @@ onSubmit(e) {
 }
 `;        
     return (
-      <React.Fragment>
+      <div className="note-container">
         <div className="note scrollable">
           <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
+          <strong>Example-05: This area display the render code.</strong> 
         </div>
-      </React.Fragment>
+      </div>
     )}
 }
 export default Note;

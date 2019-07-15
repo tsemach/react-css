@@ -1,8 +1,8 @@
 
 .sidebar-main-container {
-    height: 95%;
+    // height: 95%;
     display: flex;
-    // align-content: stretch;    
+    align-content: stretch;    
 }
    
 .Pane1 {
@@ -12,6 +12,7 @@
 
 .Pane2 {  
   background-color: antiquewhite;
+  // overflow-y: auto;
 }
 
 .Resizer {
