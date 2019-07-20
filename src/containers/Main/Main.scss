@@ -13,14 +13,16 @@
     display: flex;    
     // overflow-y: auto;
     overflow: hidden;
+
+    // One way of adding a script to SplitPane other is using 
+    // pane2Style={{overflow: "auto"}} on the <SplitPane component
+    //
+    // > .SplitPane {
+    //     > .Pane { 
+    //         overflow: auto;
+    //     }
+    // }
+
+   
+
 }
-
-// .Pane1 {
-//   background-color: azure;
-//   overflow-y: auto;
-// }
-
-// .Pane2 {
-//   background-color: azure;
-//   overflow-y: auto;
-// }

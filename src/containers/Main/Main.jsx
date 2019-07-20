@@ -16,9 +16,9 @@ class Main extends React.Component {
       <div className="main">            
         <SearchBar/>
         <div className="code-note-container">
-          <SplitPane split="vertical" minSize={50} defaultSize={100}>
+          <SplitPane split="vertical" minSize={50} defaultSize={100} pane2Style={{overflow: "auto"}}>
             <Coder code="num = num + 1" language="javascript  "/>
-            <Note pane2Style={{overflow: "auto"}}/>
+            <Note/>
           </SplitPane>
         </div>        
       </div>
