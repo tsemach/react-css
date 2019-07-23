@@ -42,7 +42,7 @@ const TreeNode = (props) => {
         <NodeIcon marginRight={10}>
           { node.type === 'file' && <FaFile /> }
           { node.type === 'folder' && node.isOpen === true && <FaFolderOpen /> }
-          { node.type === 'folder' && !node.isOpen && <FaFolder /> }
+          { node.type === 'folder' && ! node.isOpen && <FaFolder /> }
         </NodeIcon>        
 
         <span role="button" onClick={() => onNodeSelect(node)}>
