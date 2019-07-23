@@ -1,18 +1,24 @@
 
 .sidebar-main-container {
-    // height: 95%;
     display: flex;
-    align-content: stretch;    
+    align-content: stretch; 
+    align-items: stretch;   
 }
    
 .Pane1 {
-  background-color: azure;
+  background-color: rgb(220, 26, 226);
   overflow-y: auto;
+  display: flex;  
+  // align-items: stretch;
+  flex-direction: column;   
 }
 
+// .sizebar {  
+//   flex-basis: 100%;
+// }
+
 .Pane2 {  
-  background-color: antiquewhite;
-  // overflow-y: auto;
+  background-color: antiquewhite;    
 }
 
 .Resizer {
@@ -59,99 +65,3 @@
 .Resizer.disabled:hover {
   border-color: transparent;
 }
-
-// .sidebar {
-//     background-color:lightgreen;
-//     flex-basis: 10%; 
-// 		text-align: center;   
-// }
-
-// .main {
-//     background-color: aquamarine;    
-//     flex-basis: 90%; 
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .searchbar-container {
-// 	background-color:red;
-// 	flex-basis: 3%;
-// 	display: flex;
-// }
-
-// .searchbar {
-// 	margin: auto;
-// 	text-align: center;
-// }
-
-// .code-note-container {
-//     background-color: darkblue;
-//     flex-basis: 97%;    
-//     display: flex;    
-//     overflow-y: auto;
-//     overflow-x: hidden;
-// }
-
-// .code {
-//     background-color:steelblue;
-//     flex: 1; 
-//     /* flex-basis: 2%; */
-// }
-
-// .note {
-//     background-color: darkolivegreen;
-//     flex: 1;
-//     /* flex-basis: 2%; */
-//     font-size: 2em;
-// }
-
-// .scrollable {
-//     overflow-y: auto;
-//     overflow-x: hidden;
-// }
-
-// .main {
-//     background-color: aquamarine;    
-//     flex-basis: 90%; 
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .searchbar-container {
-//     background-color:red;
-//     flex-basis: 3%;
-//     display: flex;
-// }
-
-// .searchbar {
-//     margin: auto;
-//     text-align: center;
-// }
-
-// .code-note-container {
-//     background-color: darkblue;
-//     flex-basis: 97%;    
-//     display: flex;    
-//     overflow-y: auto;
-//     overflow-x: hidden;
-// }
-
-// .code {
-//     background-color:steelblue;
-//     flex: 1; 
-//     /* flex-basis: 2%; */
-// }
-
-// .note {
-//     background-color: darkolivegreen;
-//     flex: 1;
-//     /* flex-basis: 2%; */
-//     font-size: 2em;
-// }
-
-// .scrollable {
-//     overflow-y: auto;
-//     overflow-x: hidden;
-// }
-
-

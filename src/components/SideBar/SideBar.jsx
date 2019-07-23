@@ -93,46 +93,7 @@ class SideBar extends React.Component {
         <h1>Side Bar</h1> 
         <h1>Side Bar</h1> 
         <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
+
 vv        {/* <TreeMenu data={data}>      </TreeMenu> */}
       </div>
     );

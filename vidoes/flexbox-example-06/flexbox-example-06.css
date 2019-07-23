@@ -35,21 +35,22 @@
   color: #5995DA;
   background-color: #D6E9FE;
   display: flex;
-  justify-content: center;
+  justify-content: center;  
 }
 
 .header {
   width: 900px;
-  height: 300px;
+  /* height: 200px;     */
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+
 }
 
 .social,
 .logo,
-.subscribe {
-  border: 1px solid #5995DA;  
+.subscribe {    
+  border: 1px solid #5995DA;
 }
 
 .photo-grid-container {
