@@ -1,10 +1,7 @@
 import * as React from 'react';
 
-import TreeMenu from 'react-simple-tree-menu';
-import SideBarProps from './types/SideBarProps.type';
-import SideBarState from './types/SideBarState.type'
+import FileExplorer from '../Tree/FileExplorer';
 import './SideBar.scss';
-import '../../../node_modules/react-simple-tree-menu/dist/main.css';
 
 /**
  * using simple tree component 
@@ -85,6 +82,8 @@ class SideBar extends React.Component {
   render() { 
     return (
       <div className='sidebar'>
+        <FileExplorer />
+
         <h1>Side Bar</h1> 
         <h1>Side Bar</h1> 
         <h1>Side Bar</h1> 
@@ -94,7 +93,6 @@ class SideBar extends React.Component {
         <h1>Side Bar</h1> 
         <h1>Side Bar</h1> 
 
-vv        {/* <TreeMenu data={data}>      </TreeMenu> */}
       </div>
     );
   }
