@@ -82,17 +82,7 @@ class SideBar extends React.Component {
   render() { 
     return (
       <div className='sidebar'>
-        <FileExplorer />
-
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-        <h1>Side Bar</h1> 
-
+        <FileExplorer />   
       </div>
     );
   }

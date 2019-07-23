@@ -14,11 +14,11 @@ const StyledTreeNode = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px 8px;
+  padding: 5px 8px;  
   padding-left: ${props => getPaddingLeft(props.level, props.type)}px;
 
   &:hover {
-    background: lightgray;
+    background: lightgray;    
   }
 `;
 
@@ -43,8 +43,7 @@ const TreeNode = (props) => {
           { node.type === 'file' && <FaFile /> }
           { node.type === 'folder' && node.isOpen === true && <FaFolderOpen /> }
           { node.type === 'folder' && !node.isOpen && <FaFolder /> }
-        </NodeIcon>
-        
+        </NodeIcon>        
 
         <span role="button" onClick={() => onNodeSelect(node)}>
           { getNodeLabel(node) }
