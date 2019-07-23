@@ -14,68 +14,55 @@ const TreeWrapper = styled.div`
 `;
 
 const data = {
-  '/root': {
-    path: '/root',
+  '/docker': {
+    lebel: 'Docker',
+    path: '/docker',
     type: 'folder',
     isRoot: true,
-    children: ['/root/david', '/root/jslancer'],
+    children: ['/docker/build', '/docker/run'],
   },
-  '/more': {
-    path: '/more',
-    type: 'folder',
-    isRoot: true,
-    children: ['/more/david', '/more/jslancer'],
-  },
-  '/more/david': {
-    path: '/root/david',
-    type: 'folder',
-    children: ['/root/david/readme.md'],
-  },
-  '/more/jslancer': {
-    path: '/more/jslancer',
-    type: 'folder',
-    children: ['/more/jslancer/projects'],
-  },
-  '/more/jslancer/projects': {
-    path: '/more/jslancer/projects',
-    type: 'folder',
-    children: [],
-  },
-  '/root/david': {
-    path: '/root/david',
-    type: 'folder',
-    children: ['/root/david/readme.md'],
-  },
-  '/root/david/readme.md': {
-    path: '/root/david/readme.md',
-    type: 'file',
+  '/docker/build': {
+    lebel: 'sdvsv this is buidf commend',
+    path: '/docker/build',
+    type: 'file',    
     content: 'Thanks for reading me me. But there is nothing here.'
   },
-  '/root/jslancer': {
-    path: '/root/jslancer',
-    type: 'folder',
-    children: ['/root/jslancer/projects', '/root/jslancer/vblogs'],
-  },
-  '/root/jslancer/projects': {
-    path: '/root/jslancer/projects',
-    type: 'folder',
-    children: ['/root/jslancer/projects/treeview'],
-  },
-  '/root/jslancer/projects/treeview': {
-    path: '/root/jslancer/projects/treeview',
-    type: 'folder',
-    children: [],
-  },
-  '/root/jslancer/vblogs': {
-    path: '/root/jslancer/vblogs',
-    type: 'folder',
-    children: [],
+  '/docker/run': {
+    lebel: 'sdvsv this is buidf commend',
+    path: '/docker/run',
+    type: 'file',    
+    content: 'Thanks for reading me me. But there is nothing here.'
   },
   '/linux': {
+    lebel: 'Linux',
     path: '/linux',
     type: 'folder',
     isRoot: true,
-    children: ['/root/david', '/root/jslancer'],
+    children: ['/linux/david', '/linux/jslancer'],
+  },
+  '/linux/david': {
+    lebel: 'David',
+    path: '/linux/david',
+    type: 'folder',
+    children: ['/linux/david/readme.md'],
+  },
+  '/linux/jslancer': {
+    lebel: 'Jslencer',
+    path: '/linux/jslancer',
+    type: 'folder',
+    children: ['/linux/jslancer/projects'],
+  },
+  '/linux/jslancer/projects': {
+    lebel: 'Project',
+    path: '/linux/jslancer/projects',
+    type: 'folder',
+    children: [],
+  },
+  '/linux/david/readme.md': {
+    lebel: 'README.md',
+    path: '/linux/david/readme.md',
+    type: 'file',
+    content: 'Thanks for reading me me. But there is nothing here.'
   },
 };
 

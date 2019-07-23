@@ -64,7 +64,7 @@ export default class Tree extends Component {
   getRootNodes() {
     // const { nodes } = this.state;
     const nodes = this.props.data;
-    console.log("getRootNodes: ", JSON.stringify(values(nodes).filter(node => node.isRoot === true), undefined, 2))
+    // console.log("getRootNodes: ", JSON.stringify(values(nodes).filter(node => node.isRoot === true), undefined, 2))
     return values(nodes).filter(node => node.isRoot === true);
   }
 
@@ -79,7 +79,7 @@ export default class Tree extends Component {
     // const { nodes } = this.state;
     const nodes = this.props.data;
     // console.log('nodes: ', JSON.stringify(nodes, undefined, 2))
-    console.log('node.path = ', node)
+    // console.log('node.path = ', node)
     nodes[node.path].isOpen = ! node.isOpen;
     this.setState({ nodes });
   }
@@ -91,11 +91,12 @@ export default class Tree extends Component {
 
   render() {
     const rootNodes = this.getRootNodes();
-    console.log("rootNodes = ", JSON.stringify(rootNodes, undefined, 2))
+    // console.log("rootNodes = ", JSON.stringify(rootNodes, undefined, 2))
     return (
       <div>
-        { rootNodes.map(node => (
+        { rootNodes.map(node => (          
           <TreeNode 
+            key={'Tree' + node.path}
             node={node}
             getChildNodes={this.getChildNodes}
             onToggle={this.onToggle}

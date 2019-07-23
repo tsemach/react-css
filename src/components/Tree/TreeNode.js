@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import { FaFile, FaFolder, FaFolderOpen, FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import styled from 'styled-components';
 import last from 'lodash/last';
@@ -27,10 +27,13 @@ const NodeIcon = styled.div`
   margin-right: ${props => props.marginRight ? props.marginRight : 5}px;
 `;
 
-const getNodeLabel = (node) => last(node.path.split('/'));
+// const getNodeLabel = (node) => last(node.path.split('/'));
+const getNodeLabel = (node) => node.lebel;
 
 const TreeNode = (props) => {
   const { node, getChildNodes, level, onToggle, onNodeSelect } = props;
+
+  console.log('NNNNNNNNNNNN: NODE:', JSON.stringify(node, undefined, 2));
 
   return (
     <React.Fragment>
@@ -52,6 +55,7 @@ const TreeNode = (props) => {
 
       { node.isOpen && getChildNodes(node).map(childNode => (
         <TreeNode 
+          key={'TreeNode' + childNode.path}
           {...props}
           node={childNode}          
           level={level + 1}
