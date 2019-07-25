@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/prismjs": "^1.16.0",
+    "fs": "0.0.1-security",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
     "prismjs": "^1.16.0",
@@ -24,7 +25,8 @@
     "react-split-pane": "^0.1.87",
     "react-splitter-layout": "^4.0.0",
     "styled-components": "^4.3.2",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "walk": "^2.3.14"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
