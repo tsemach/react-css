@@ -15,7 +15,7 @@ const TreeWrapper = styled.div`
 
 const data = {
   '/docker': {
-    lebel: 'Docker',
+    lebel: 'Docker: collection of docker notes',
     path: '/docker',
     type: 'folder',
     isRoot: true,

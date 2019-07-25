@@ -5,8 +5,8 @@ import last from 'lodash/last';
 import PropTypes from 'prop-types';
 
 const getPaddingLeft = (level, type) => {
-  let paddingLeft = level * 20;
-  if (type === 'file') paddingLeft += 20;
+  let paddingLeft = level * 15;
+  if (type === 'file') paddingLeft += 5;
   return paddingLeft;
 }
 
@@ -32,8 +32,6 @@ const getNodeLabel = (node) => node.lebel;
 
 const TreeNode = (props) => {
   const { node, getChildNodes, level, onToggle, onNodeSelect } = props;
-
-  console.log('NNNNNNNNNNNN: NODE:', JSON.stringify(node, undefined, 2));
 
   return (
     <React.Fragment>
