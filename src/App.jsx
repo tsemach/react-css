@@ -26,7 +26,7 @@ class App extends Component {
       <React.Fragment>    
         <Header/>
         <div className="sidebar-main-container">
-          <SplitPane split="vertical" minSize={50} defaultSize={350}>
+          <SplitPane split="vertical" minSize={50} defaultSize={275}>
             <SideBar className="sizebar" onSelect={this.onSideBarSelect}/>
             <Main node={this.state.node}/>
           </SplitPane>
