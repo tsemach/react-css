@@ -58,13 +58,8 @@ class Note extends React.Component {
     return (      
       <div className="note-container">
         <div className="note scrollable">
-          <FancyBorder color="blue">
-            <h1 className="Dialog-title">
-              Welcome
-            </h1>
-            <p className="Dialog-message">
-            </p>             
-             <div>{this.renderCode(code, this.options)}</div>;                                      
+          <FancyBorder color="blue">                        
+             <div>{this.renderCode(code, this.options)}</div>                                
           </FancyBorder>
           
         </div>
