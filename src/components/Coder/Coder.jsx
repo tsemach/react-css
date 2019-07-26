@@ -21,7 +21,7 @@ class Coder extends React.Component {
     const {code, language}  = this.props
 
     return (
-      <div className="code scrollable">
+      <div className="coder scrollable">
         <pre className="line-numbers">
           <code className="language-javascript">      
           {code}
