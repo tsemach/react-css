@@ -1,5 +1,5 @@
 import React, { Children } from 'react';
-import { FaFile, FaFolder, FaFolderOpen, FaChevronDown, FaChevronRight } from 'react-icons/fa';
+import { FaFile, FaFolder, FaFolderOpen, FaChevronDown, FaChevronRight, FaHtml5, FaReadme, FaCode } from 'react-icons/fa';
 import styled from 'styled-components';
 import last from 'lodash/last';
 import PropTypes from 'prop-types';
@@ -27,8 +27,23 @@ const NodeIcon = styled.div`
   margin-right: ${props => props.marginRight ? props.marginRight : 5}px;
 `;
 
-// const getNodeLabel = (node) => last(node.path.split('/'));
 const getNodeLabel = (node) => node.lebel;
+
+// '/css-layout-03-video-11-14/README.md': {
+//     lebel: 'README.md',
+//     path: '/css-layout-03-video-11-14/README.md',
+//     type: 'file',    
+//     content: 'README Layout video 03'
+//   },
+
+const getIcon = (node) => {
+  if (node.type === 'folder' && node.isOpen === true) { return <FaFolderOpen /> }
+  if (node.type === 'folder' && ! node.isOpen) { return <FaFolder /> }  
+  if (node.type === 'file' && node.path.endsWith('.html')) { return <FaCode/>}
+  if (node.type === 'file' && node.path.endsWith('.css')) { return <FaHtml5/>}
+  if (node.type === 'file' && node.path.endsWith('README.md')) { return <FaReadme/>}
+  if (node.type === 'file') { return <FaFile /> }
+}
 
 const TreeNode = (props) => {
   const { node, getChildNodes, level, onToggle, onNodeSelect } = props;
@@ -41,9 +56,10 @@ const TreeNode = (props) => {
         </NodeIcon>
         
         <NodeIcon marginRight={10}>
-          { node.type === 'file' && <FaFile /> }
+          {getIcon(node)}
+          {/* { node.type === 'file' && <FaFile /> }
           { node.type === 'folder' && node.isOpen === true && <FaFolderOpen /> }
-          { node.type === 'folder' && ! node.isOpen && <FaFolder /> }
+          { node.type === 'folder' && ! node.isOpen && <FaFolder /> } */}
         </NodeIcon>        
 
         <span role="button" onClick={() => onNodeSelect(node)}>

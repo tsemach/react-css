@@ -7,6 +7,11 @@ class Config {
   get basedir() {
     return this._basedir;
   }
+
+  getPath(suffix, trailer = '/') {
+    return this.basedir + trailer + suffix;
+  }
+    
 }
 
 export default new Config();

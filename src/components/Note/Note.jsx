@@ -17,15 +17,8 @@ class Note extends React.Component {
   }
 
   render() {
-const code = `
-onSubmit(e) {
-  e.preventDefault();
-  const job = {
-    title: 'Developer',
-    company: 'Facebook' 
-  };
-}
-`;        
+    const { code } = this.props;
+
     return (
       <div className="note-container">
         <div className="note scrollable">
@@ -34,70 +27,10 @@ onSubmit(e) {
               Welcome
             </h1>
             <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
             </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
-            <p className="Dialog-message">
-              Thank you for visiting our spacecraft!
-            </p>
+            <strong>Example-05: This area display the render code.</strong> 
           </FancyBorder>
-          <strong>Example-05: This area display the render code.</strong> 
+          {code}
         </div>
       </div>
     )}

@@ -9,14 +9,26 @@ import SideBar from './components/SideBar';
 import Main from './containers/Main';
 
 class App extends Component {
+  constructor() {
+    super()
+    
+    this.state = {node: {}}
+    this.onSideBarSelect = this.onSideBarSelect.bind(this);    
+  }
+
+  onSideBarSelect(node) {
+    this.setState({node});
+  }
+
   render() {
+    console.log("APP: RENDER IS CALLED, state=", this.state);
     return (
       <React.Fragment>    
         <Header/>
         <div className="sidebar-main-container">
           <SplitPane split="vertical" minSize={50} defaultSize={350}>
-            <SideBar className="sizebar"/>
-            <Main/>
+            <SideBar className="sizebar" onSelect={this.onSideBarSelect}/>
+            <Main node={this.state.node}/>
           </SplitPane>
         </div>     
       </React.Fragment>

@@ -33,44 +33,21 @@ const data2=  [{
   },
 ];
 
-// const data = {
-//   '/css-layout-01-video-01-06': {
-//     lebel: 'css-layout-01-video-01-06',
-//     path: '/css-layout-01-video-01-06',
-//     type: 'folder',
-//     isRoot: true,
-//     children: ['/css-layout-01-video-01-06/css-layout-01.css', '/css-layout-01-video-01-06/css-layout-01.html', '/css-layout-01-video-01-06/README.md'],
-//   },
-//   '/css-layout-01-video-01-06/css-layout-01.css': {
-//     lebel: 'css-layout-01.css',
-//     path: '/css-layout-01-video-01-06/css-layout-01.css',
-//     type: 'file',    
-//     content: 'CSS Layout video 01'
-//   },
-//   '/css-layout-01-video-01-06/css-layout-01.html': {
-//     lebel: 'css-layout-01.html',
-//     path: '/css-layout-01-video-01-06/css-layout-01.html',
-//     type: 'file',    
-//     content: 'HTML Layout video 01'
-//   },
-//   '/css-layout-01-video-01-06/README.md': {
-//     lebel: 'README.md',
-//     path: '/css-layout-01-video-01-06/README.md',
-//     type: 'file',    
-//     content: 'README Layout video 01'
-//   },
-// };
-
 class SideBar extends React.Component {  
   constructor() {  
     super();  
+
+    this.onSelect = this.onSelect.bind(this);
+  }
+
+  onSelect(node) {
+    this.props.onSelect(node);
   }
 
   render() { 
-    console.log(fs.readFileSync(__dirname + '/data.js').toString())
     return (
       <div className='sidebar'>
-        <FileExplorer data={data}/>   
+        <FileExplorer data={data} onSelect={this.onSelect}/>
       </div>
     );
   }

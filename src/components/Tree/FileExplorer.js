@@ -75,9 +75,11 @@ export default class FileExplorer extends Component {
     this.onSelect = this.onSelect.bind(this);
   }
 
-  onSelect(file) {
-    this.setState({ selectedFile: file });
-    console.log("FileExplorer: file = ", JSON.stringify(file, undefined, 2));
+  onSelect(node) {    
+    this.setState({ selectedFile: node });
+    if (node.type === 'file') {
+      this.props.onSelect(node)
+    }
   }
 
   render() {
