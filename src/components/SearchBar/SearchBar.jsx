@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import SearchBarPropsType from './types/SearchBarProps.type';
-import SearchBarStateType from './types/SearchState.type';
 import './SearchBar.scss';
 
 class SearchBar extends React.Component {  
