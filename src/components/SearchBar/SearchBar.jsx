@@ -6,11 +6,13 @@ class SearchBar extends React.Component {
   
   constructor(props) {
     super(props)
+    
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  // handleInputChange = (event) => {
-  //   console.log(event.target.value);
-  // }
+  handleInputChange(event) {
+    console.log(event.target.value);
+  }
 
   render() { 
     const filteredData = [
@@ -22,7 +24,10 @@ class SearchBar extends React.Component {
     return (          
       <div className="searchbar-container">
         <div className="searchbar">
-          Example-05: SEARCH-BAR            
+          <input               
+            placeholder="Search for.."
+            onChange={this.handleInputChange}
+          />
         </div>
       </div>   
     );

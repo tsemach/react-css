@@ -1,12 +1,21 @@
 
 .searchbar-container {
-    background-color:red;
-    flex-basis: 35px;
+    background-color:transparent;
+    flex-basis: 30px;
     display: flex;
+    box-sizing: border-box;
 }
 
-.searchbar {
-    // position: fixed;
-    margin: auto;
-    text-align: center;
+.searchbar {    
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    flex-basis: 100%;    
+    
+    input {                            
+        padding: 0px 5px;
+        height: 100%;
+        font-size: 90%;        
+        border: 1px groove;
+    }
 }
