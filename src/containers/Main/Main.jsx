@@ -15,20 +15,7 @@ class Main extends React.Component {
     this.state = {code: '', path: ''};
   }
 
-  // showFile (fullname) {   
-  //   console.log("showFile is called ... filename: ", fullname);
-  //   fetch('http://127.0.0.1:1234' + fullname)
-  //     .then(response => {    
-  //       return response.text()        
-  //     })
-  //     .then(data => {
-  //       console.log("DATA:", data);
-
-  //     })
-  // }
-
   componentDidUpdate(prevProps, prevState) {
-    console.log("Main:componentDidMount: is called, prevState=", prevState);    
     const { node } = this.props;
     
     if (prevState.path !== node.path) {      
@@ -40,13 +27,11 @@ class Main extends React.Component {
   }
 
   readFile(fullname) {
-     console.log("Main::readFile: path = ", fullname);        
     fetch('http://127.0.0.1:1234' + fullname)
       .then(response => {    
         return response.text()
       })
       .then(code => {
-        // console.log("DATA:", code);
         this.setState({code});
       })
   }
@@ -62,10 +47,6 @@ class Main extends React.Component {
 
   render() {
     const { node } = this.props;
-
-    if (node.path) {        
-      //const code = this.readFile('/videos' + node.path);
-    }
     
     return (        
       <div className="main">            
