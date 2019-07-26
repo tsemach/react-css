@@ -46,7 +46,7 @@ class Main extends React.Component {
         return response.text()
       })
       .then(code => {
-        console.log("DATA:", code);
+        // console.log("DATA:", code);
         this.setState({code});
       })
   }

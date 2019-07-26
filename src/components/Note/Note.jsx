@@ -1,4 +1,7 @@
 import * as React from 'react';
+import ReactDOMServer from 'react-dom/server';
+
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 import './Note.scss';
 
@@ -14,12 +17,45 @@ class Note extends React.Component {
   
   constructor(props) {
     super(props);
+    this.rendering = {html: false, body: false};
+    this.options = {
+      decodeEntities: true,
+      transform: this.transform
+    };
+  }
+      
+  renderCode(code) {
+    let rendering = {html: false, body: false};
+
+    function transform(node) {      
+      if (node.type === 'tag') {        
+        if (node.name === 'html') {          
+          rendering.html = true;                        
+
+          return;
+        }
+        if (node.name === 'body' && rendering.html) {
+          rendering.body = true;
+
+          return;
+        }
+      }      
+      if (rendering.html && rendering.body) {
+        return;
+      }
+      return null;
+    }
+
+    const options = {
+      decodeEntities: true,
+      transform: transform
+    };
+    return ReactHtmlParser(code, options);
   }
 
-  render() {
+  render() {    
     const { code } = this.props;
-
-    return (
+    return (      
       <div className="note-container">
         <div className="note scrollable">
           <FancyBorder color="blue">
@@ -27,10 +63,10 @@ class Note extends React.Component {
               Welcome
             </h1>
             <p className="Dialog-message">
-            </p>
-            <strong>Example-05: This area display the render code.</strong> 
+            </p>             
+             <div>{this.renderCode(code, this.options)}</div>;                                      
           </FancyBorder>
-          {code}
+          
         </div>
       </div>
     )}

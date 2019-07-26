@@ -20,6 +20,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-html-parser": "^2.0.2",
     "react-icons": "^3.7.0",
     "react-simple-tree-menu": "^1.1.4",
     "react-split-pane": "^0.1.87",
