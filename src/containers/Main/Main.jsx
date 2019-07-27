@@ -12,16 +12,19 @@ import './Main.scss';
 class Main extends React.Component {  
   constructor() {
     super();
-    this.state = {code: '', path: ''};
+    this.state = {code: '', path: '', fullname: ''};
   }
 
   componentDidUpdate(prevProps, prevState) {
     const { node } = this.props;
-    
-    if (prevState.path !== node.path) {      
-      if (node.path) {        
-        const code = this.readFile('/videos' + node.path);
-        this.setState({code, path: node.path})        
+    const fullname = '/videos' + node.path;
+
+    if (prevState.fullname !== fullname) {
+      // this.setState({fullname});
+
+      if (node.path) {
+        const code = this.readFile(fullname);
+        //this.setState({code, path: node.path})        
       }
     }
   }
@@ -32,7 +35,7 @@ class Main extends React.Component {
         return response.text()
       })
       .then(code => {
-        this.setState({code});
+        this.setState({code, fullname});
       })
   }
 
@@ -50,11 +53,11 @@ class Main extends React.Component {
     
     return (        
       <div className="main">            
-        <SearchBar/>
+        <SearchBar node={node}/>
         <div className="code-note-container">
           <SplitPane split="vertical" minSize={50} defaultSize={800} pane2Style={{overflow: "auto"}}>
             <Coder code={this.state.code} language={this.getLanguage(node.path)}/>
-            <Note code={this.state.code}/>
+            <Note code={this.state.code} path={node.path}/>
           </SplitPane>
         </div>        
       </div>
