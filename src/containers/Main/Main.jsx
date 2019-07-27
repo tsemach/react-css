@@ -3,6 +3,7 @@ import * as React from 'react';
 import SplitPane from 'react-split-pane';
 
 import Config from '../../common/config';
+import renderHtml from '../../common/render-html';
 import SearchBar from '../../components/SearchBar';
 import Coder from '../../components/Coder';
 import Note from '../../components/Note'
@@ -12,20 +13,33 @@ import './Main.scss';
 class Main extends React.Component {  
   constructor() {
     super();
-    this.state = {code: '', path: '', fullname: ''};
+    this.state = {code: '', html: '', stylesheet: '', path: '', fullpath: ''};
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const { node } = this.props;
-    const fullname = '/videos' + node.path;
+  async componentDidUpdate(prevProps, prevState) {
+    const { node } = this.props;    
 
-    if (prevState.fullname !== fullname) {
-      // this.setState({fullname});
+    if (node.path && prevProps.node.path !== node.path) {
+      //this.setState({path: node.path});
 
-      if (node.path) {
-        const code = this.readFile(fullname);
-        //this.setState({code, path: node.path})        
-      }
+      // read the code file from server
+      let response, code;
+      const fullpath = '/videos' + node.path;
+      response = await fetch('http://127.0.0.1:1234' + fullpath)
+      code = await response.text();
+      console.log("CCCCCCCCCCCCCC CODE =", code);
+
+      // if html parse, extract stylesheet and fetch it as well
+      const { html, stylesheet } = renderHtml(code);
+
+      response = await fetch('http://127.0.0.1:1234' + stylesheet.content)      
+      const codeStylesheet = await response.text();
+
+      console.log("HHHHHHHHHHHHHh HTML =", html);
+      console.log("SSSSSSSSSSSSSS stylesheet =", codeStylesheet);
+      this.setState({code, html, stylesheet: codeStylesheet, path: node.path, fullpath});
+
+      // this.readFile('/videos' + node.path);      
     }
   }
 
@@ -35,7 +49,8 @@ class Main extends React.Component {
         return response.text()
       })
       .then(code => {
-        this.setState({code, fullname});
+
+        this.setState({code});
       })
   }
 
@@ -57,7 +72,7 @@ class Main extends React.Component {
         <div className="code-note-container">
           <SplitPane split="vertical" minSize={50} defaultSize={800} pane2Style={{overflow: "auto"}}>
             <Coder code={this.state.code} language={this.getLanguage(node.path)}/>
-            <Note code={this.state.code} path={node.path}/>
+            <Note html={this.state.html} stylesheet={this.state.stylesheet} fullpath={this.state.fullpath}/>
           </SplitPane>
         </div>        
       </div>

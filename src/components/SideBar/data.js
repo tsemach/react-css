@@ -278,4 +278,144 @@ export default {
     content: 'README Layout video 07'
   },
   //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+  '/flexbox-example-02': {
+    lebel: 'flexbox-example-02',
+    path: '/flexbox-example-02',
+    type: 'folder',
+    isRoot: true,
+    children: ['/flexbox-example-02/flexbox-example-02.css', '/flexbox-example-02/flexbox-example-02.html', '/flexbox-example-02/README.md'],
+  },
+  '/flexbox-example-02/flexbox-example-02.css': {
+    lebel: 'flexbox-example-02.css',
+    path: '/flexbox-example-02/flexbox-example-02.css',
+    type: 'file',
+    content: 'CSS Layout video 07'
+  },
+  '/flexbox-example-02/flexbox-example-02.html': {
+    lebel: 'flexbox-example-02.html',
+    path: '/flexbox-example-02/flexbox-example-02.html',
+    type: 'file',    
+    content: 'HTML Layout video 07'
+  },
+  '/flexbox-example-02/README.md': {
+    lebel: 'README.md',
+    path: '/flexbox-example-02/README.md',
+    type: 'file',    
+    content: 'README Layout video 07'
+  },
+  //----------------------------------------------------------------------------------------------------------------------------------------------------  
+
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+  '/flexbox-example-03': {
+    lebel: 'flexbox-example-03',
+    path: '/flexbox-example-03',
+    type: 'folder',
+    isRoot: true,
+    children: ['/flexbox-example-03/flexbox-example-03.css', '/flexbox-example-03/flexbox-example-03.html', '/flexbox-example-03/README.md'],
+  },
+  '/flexbox-example-03/flexbox-example-03.css': {
+    lebel: 'flexbox-example-03.css',
+    path: '/flexbox-example-03/flexbox-example-03.css',
+    type: 'file',
+    content: 'CSS Layout video 07'
+  },
+  '/flexbox-example-03/flexbox-example-03.html': {
+    lebel: 'flexbox-example-03.html',
+    path: '/flexbox-example-03/flexbox-example-03.html',
+    type: 'file',    
+    content: 'HTML Layout video 07'
+  },
+  '/flexbox-example-03/README.md': {
+    lebel: 'README.md',
+    path: '/flexbox-example-03/README.md',
+    type: 'file',    
+    content: 'README Layout video 07'
+  },
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+  '/flexbox-example-04': {
+    lebel: 'flexbox-example-04',
+    path: '/flexbox-example-04',
+    type: 'folder',
+    isRoot: true,
+    children: ['/flexbox-example-04/flexbox-example-04.css', '/flexbox-example-04/flexbox-example-04.html', '/flexbox-example-04/README.md'],
+  },
+  '/flexbox-example-04/flexbox-example-04.css': {
+    lebel: 'flexbox-example-04.css',
+    path: '/flexbox-example-04/flexbox-example-04.css',
+    type: 'file',
+    content: 'CSS Layout video 07'
+  },
+  '/flexbox-example-04/flexbox-example-04.html': {
+    lebel: 'flexbox-example-04.html',
+    path: '/flexbox-example-04/flexbox-example-04.html',
+    type: 'file',    
+    content: 'HTML Layout video 07'
+  },
+  '/flexbox-example-04/README.md': {
+    lebel: 'README.md',
+    path: '/flexbox-example-04/README.md',
+    type: 'file',    
+    content: 'README Layout video 07'
+  },
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+  '/flexbox-example-05': {
+    lebel: 'flexbox-example-05',
+    path: '/flexbox-example-05',
+    type: 'folder',
+    isRoot: true,
+    children: ['/flexbox-example-05/flexbox-example-05.css', '/flexbox-example-05/flexbox-example-05.html', '/flexbox-example-05/README.md'],
+  },
+  '/flexbox-example-05/flexbox-example-05.css': {
+    lebel: 'flexbox-example-05.css',
+    path: '/flexbox-example-05/flexbox-example-05.css',
+    type: 'file',
+    content: 'CSS Layout video 07'
+  },
+  '/flexbox-example-05/flexbox-example-05.html': {
+    lebel: 'flexbox-example-05.html',
+    path: '/flexbox-example-05/flexbox-example-05.html',
+    type: 'file',    
+    content: 'HTML Layout video 07'
+  },
+  '/flexbox-example-05/README.md': {
+    lebel: 'README.md',
+    path: '/flexbox-example-05/README.md',
+    type: 'file',    
+    content: 'README Layout video 07'
+  },
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
+  '/flexbox-example-06': {
+    lebel: 'flexbox-example-06',
+    path: '/flexbox-example-06',
+    type: 'folder',
+    isRoot: true,
+    children: ['/flexbox-example-06/flexbox-example-06.css', '/flexbox-example-06/flexbox-example-06.html', '/flexbox-example-06/README.md'],
+  },
+  '/flexbox-example-06/flexbox-example-06.css': {
+    lebel: 'flexbox-example-06.css',
+    path: '/flexbox-example-06/flexbox-example-06.css',
+    type: 'file',
+    content: 'CSS Layout video 07'
+  },
+  '/flexbox-example-06/flexbox-example-06.html': {
+    lebel: 'flexbox-example-06.html',
+    path: '/flexbox-example-06/flexbox-example-06.html',
+    type: 'file',    
+    content: 'HTML Layout video 07'
+  },
+  '/flexbox-example-06/README.md': {
+    lebel: 'README.md',
+    path: '/flexbox-example-06/README.md',
+    type: 'file',    
+    content: 'README Layout video 07'
+  },
+  //----------------------------------------------------------------------------------------------------------------------------------------------------
 };
