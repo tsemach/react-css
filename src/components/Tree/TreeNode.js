@@ -57,9 +57,6 @@ const TreeNode = (props) => {
         
         <NodeIcon marginRight={10}>
           {getIcon(node)}
-          {/* { node.type === 'file' && <FaFile /> }
-          { node.type === 'folder' && node.isOpen === true && <FaFolderOpen /> }
-          { node.type === 'folder' && ! node.isOpen && <FaFolder /> } */}
         </NodeIcon>        
 
         <span role="button" onClick={() => onNodeSelect(node)}>

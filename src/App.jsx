@@ -21,8 +21,7 @@ class App extends Component {
     this.setState({node});
   }
 
-  render() {
-    console.log("APP: RENDER IS CALLED, state.node=", this.state.node);
+  render() {  
     return (
       <React.Fragment>    
         <Header/>

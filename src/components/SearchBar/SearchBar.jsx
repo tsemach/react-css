@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
 
   render() { 
     const { node } = this.props; 
-
+    
     return (          
       <div className="searchbar-container">
         <div className="searchbar">

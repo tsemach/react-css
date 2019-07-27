@@ -16,42 +16,26 @@ class Main extends React.Component {
     this.state = {code: '', html: '', stylesheet: '', path: '', fullpath: ''};
   }
 
+  /**
+   * componentDidUpdate: read code file from server, parse it, extract the stylesheet from the header
+   *  meta data, get the stylesheet from server and feed it to code and note components
+   */
   async componentDidUpdate(prevProps, prevState) {
     const { node } = this.props;    
 
-    if (node.path && prevProps.node.path !== node.path) {
-      //this.setState({path: node.path});
-
-      // read the code file from server
+    if (node.path && prevProps.node.path !== node.path) {          
       let response, code;
+
       const fullpath = '/videos' + node.path;
       response = await fetch('http://127.0.0.1:1234' + fullpath)
       code = await response.text();
-      console.log("CCCCCCCCCCCCCC CODE =", code);
-
-      // if html parse, extract stylesheet and fetch it as well
       const { html, stylesheet } = renderHtml(code);
 
       response = await fetch('http://127.0.0.1:1234' + stylesheet.content)      
       const codeStylesheet = await response.text();
 
-      console.log("HHHHHHHHHHHHHh HTML =", html);
-      console.log("SSSSSSSSSSSSSS stylesheet =", codeStylesheet);
       this.setState({code, html, stylesheet: codeStylesheet, path: node.path, fullpath});
-
-      // this.readFile('/videos' + node.path);      
     }
-  }
-
-  readFile(fullname) {
-    fetch('http://127.0.0.1:1234' + fullname)
-      .then(response => {    
-        return response.text()
-      })
-      .then(code => {
-
-        this.setState({code});
-      })
   }
 
   getLanguage(filename) {
