@@ -20,20 +20,14 @@ class Coder extends React.Component {
   render() {
     const {code, language}  = this.props
 
+    console.log("Coder: render is called, code.length=", code ? code.length: 'undefined');
     return (
       <div className="coder scrollable">
         <pre className="line-numbers">
           <code className="language-javascript">      
           {code}
           </code>
-        </pre>
-        {/* <pre>
-          <code className="language-javascript">      
-            {code}
-          </code>
-        </pre> 
-        Example-05: NOTE
-        <br/><br/><br/> */}
+        </pre>        
       </div>    
     )}
 }

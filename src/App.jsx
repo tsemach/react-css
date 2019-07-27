@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("APP: RENDER IS CALLED, state=", this.state);
+    console.log("APP: RENDER IS CALLED, state.node=", this.state.node);
     return (
       <React.Fragment>    
         <Header/>

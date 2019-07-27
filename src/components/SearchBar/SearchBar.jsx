@@ -15,11 +15,7 @@ class SearchBar extends React.Component {
   }
 
   render() { 
-    const filteredData = [
-      'bash',
-      'docker',
-      'typescript'
-    ];
+    const { node } = this.props; 
 
     return (          
       <div className="searchbar-container">
@@ -27,6 +23,7 @@ class SearchBar extends React.Component {
           <input               
             placeholder="Search for.."
             onChange={this.handleInputChange}
+            defaultValue={node ? node.path : ''}
           />
         </div>
       </div>   
