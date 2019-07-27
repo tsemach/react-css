@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SplitPane from 'react-split-pane';
 import 'react-splitter-layout/lib/index.css';
+import 'babel-polyfill';
 
 import './App.scss';
 
