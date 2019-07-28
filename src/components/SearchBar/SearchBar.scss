@@ -4,8 +4,7 @@
         position: absolute;
         width: 500px;
         margin: 0 5px;
-        padding: 5px;
-        height: 50px;
+        padding: 5px;        
         font-size: 90%;
     }
 }
@@ -16,18 +15,16 @@
     box-sizing: border-box;
     justify-content: flex-start;
     align-items: center;
-    height: 50px;
+    height: 48px;
 
     .select-placeholder {
         width: 500px;
         margin: 0 5px;
-        padding: 5px;
-        height: 40px;
+        padding: 5px;        
     }
  
     .toolbar {        
         display: flex;            
-        margin: 5px 10px;        
-        // border: 2px solid;
+        margin: 5px 10px;                
     }
 }
