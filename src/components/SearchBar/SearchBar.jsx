@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { FaFile, FaFolder, FaFolderOpen, FaChevronDown, FaChevronRight, FaHtml5, FaReadme, FaCode } from 'react-icons/fa';
+import Select from 'react-select';
+
+import { FaFile, FaFolder, FaFolderOpen, FaChevronDown, FaChevronRight, FaHtml5, FaReadme, FaCode, FaRegBell } from 'react-icons/fa';
 import { openInNewTab } from '../../common/utils';
 import { MdLaunch } from 'react-icons/md';
 
@@ -27,23 +29,33 @@ class SearchBar extends React.Component {
   render() { 
     const { node } = this.props; 
 
+    const options = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' }
+    ];
+
+    const colorLanuch = node.path ? "rgb(11, 11, 11)" : "rgb(211, 211, 211)";
+
     console.log("SEARCHBAR: node.path =", node.path)            
     return (          
-      <div className="searchbar">
-        {/* <div className="searchbar"> */}
-          <input
-            placeholder="Search for.."
-            onChange={this.handleInputChange}
-            defaultValue={node ? node.path : ''}
-          />
-        {/* </div> */}
-        <div className="toolbar">     
-          <MdLaunch
-            size={32}
-            onClick={() => this.handleLaunch(node)}
-          />
+      <React.Fragment>
+        <div className="select-container">
+          <Select className="select" options={options}/>
         </div>
-      </div>   
+
+        <div className="searchbar">
+          <div className="select-placeholder">
+          </div>
+          <div className="toolbar">     
+            <MdLaunch
+              color={colorLanuch}
+              size={32}
+              onClick={() => this.handleLaunch(node)}
+            />
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }
