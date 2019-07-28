@@ -31,9 +31,11 @@ class Main extends React.Component {
       code = await response.text();
       const { html, stylesheet } = renderHtml(code);
 
-      response = await fetch('http://127.0.0.1:1234' + stylesheet.content)      
-      const codeStylesheet = await response.text();
-
+      let codeStylesheet = '';
+      if (fullpath.endsWith('.html')) {
+        response = await fetch('http://127.0.0.1:1234' + stylesheet.content)      
+        codeStylesheet = await response.text();
+      }
       this.setState({code, html, stylesheet: codeStylesheet, path: node.path, fullpath});
     }
   }
