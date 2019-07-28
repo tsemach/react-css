@@ -11,13 +11,13 @@ const Header = () => {
     // </div>  
     
     <div className="header-container"> 
-      <h2 className="header-title"><a href="#">React CSS/SCSS</a></h2>      
-      <ul className="header-navbar">
+      <h2 className="header-title"><a href="#">React CSS/SCSS (tsemach.org)</a></h2>      
+      {/* <ul className="header-navbar">
         <li><a href="#">Open</a></li>
         <li><a href="#">New</a></li>
         <li><a href="#">Save</a></li>
         <li><a href="#">Delete</a></li>                                           
-      </ul>            
+      </ul>             */}
       <ul className="header-menu">
         <li><a href="#">About Me</a></li>
         <li><a href="#">My Projects</a></li>
