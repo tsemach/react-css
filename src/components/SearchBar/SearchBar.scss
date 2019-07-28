@@ -18,13 +18,19 @@
     height: 48px;
 
     .select-placeholder {
-        width: 500px;
+        width: 480px;
         margin: 0 5px;
         padding: 5px;        
     }
  
     .toolbar {        
         display: flex;            
-        margin: 5px 10px;                
+        margin: 5px 10px;
+        
+        .icons {
+            &:hover {
+                cursor:pointer;
+            }
+        }
     }
 }

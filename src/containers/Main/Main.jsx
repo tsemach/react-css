@@ -50,11 +50,11 @@ class Main extends React.Component {
   }  
 
   render() {
-    const { node } = this.props;
+    const { node, options, onSearchBarChange} = this.props;
     
     return (        
       <div className="main">            
-        <SearchBar node={node}/>
+        <SearchBar node={node} options={options} onSearchBarChange={onSearchBarChange}/>
         <div className="code-note-container">
           <SplitPane split="vertical" minSize={50} defaultSize={800} pane2Style={{overflow: "auto"}}>
             <Coder code={this.state.code} language={this.getLanguage(node.path)}/>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as fs from 'fs';
 
 import FileExplorer from '../Tree/FileExplorer';
-import data from '../../containers/Main/data';
+// import data from '../../common/data';
 import './SideBar.scss';
 
 /**
@@ -21,6 +21,7 @@ class SideBar extends React.Component {
   }
 
   render() { 
+    const { data } = this.props;
     return (
       <div className='sidebar'>
         <FileExplorer data={data} onSelect={this.onSelect}/>

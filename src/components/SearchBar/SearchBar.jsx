@@ -3,7 +3,7 @@ import Select from 'react-select';
 
 import { FaFile, FaFolder, FaFolderOpen, FaChevronDown, FaChevronRight, FaHtml5, FaReadme, FaCode, FaRegBell } from 'react-icons/fa';
 import { openInNewTab } from '../../common/utils';
-import { MdLaunch } from 'react-icons/md';
+import { MdLaunch, MdCode } from 'react-icons/md';
 
 import './SearchBar.scss';
 
@@ -12,46 +12,46 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props)
     
-    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleLaunch = this.handleLaunch.bind(this);
-  }
-
-  handleInputChange(node) {
-    console.log(node);
   }
 
   handleLaunch(node) {
     if (node.path) {
       openInNewTab('/videos' + node.path)
     }
-  }
+  }      
 
   render() { 
-    const { node } = this.props; 
+    const { node, options, onSearchBarChange} = this.props; 
+    
+    const colorLanuch = node.path ? "rgb(128, 128, 128)" : "rgb(211, 211, 211)";
 
-    const options = [
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' }
-    ];
-
-    const colorLanuch = node.path ? "rgb(11, 11, 11)" : "rgb(211, 211, 211)";
+    const colorMdCode = node.path ? "rgb(128, 128, 128)" : "rgb(211, 211, 211)";
 
     console.log("SEARCHBAR: node.path =", node.path)            
     return (          
       <React.Fragment>
         <div className="select-container">
-          <Select className="select" options={options}/>
+          <Select className="select" options={options} onChange={onSearchBarChange}/>
         </div>
 
         <div className="searchbar">
           <div className="select-placeholder">
           </div>
-          <div className="toolbar">     
+          <div className="toolbar">
             <MdLaunch
+              className="icons"
               color={colorLanuch}
               size={32}
+              style={{padding: '10px'}}
               onClick={() => this.handleLaunch(node)}
+            />
+            <FaCode 
+              className="icons"
+              color={colorMdCode}
+              size={32}
+              style={{padding: '10px'}}
+              onClick={() => this.handleLaunch(node)}              
             />
           </div>
         </div>
