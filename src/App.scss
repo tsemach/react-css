@@ -9,16 +9,12 @@
   background-color: rgb(223, 233, 238);
   overflow-y: auto;
   display: flex;  
-  // align-items: stretch;
   flex-direction: column;     
 }
 
-// .sizebar {  
-//   flex-basis: 100%;
-// }
-
 .Pane2 {  
-  background-color: antiquewhite;    
+  // background-color: antiquewhite;    
+  background-color: rgb(238, 232, 224);    
 }
 
 .Resizer {

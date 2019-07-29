@@ -13,22 +13,22 @@ import Header from './components/Header';
 import SideBar from './components/SideBar';
 import Main from './containers/Main';
 
+/**
+ * state: 
+ *  view: 
+ *    left - cssCode, htmlCode
+ *    right - cssCode, htmlCode, htmlRendered
+ */
 class App extends Component {
   constructor() {
     super()
     
-    this.state = {node: {}}
+    this.state = {node: {}, views: {left: '', right: ''}}
     this.onSideBarSelect = this.onSideBarSelect.bind(this);
     this.handleSearchBarChange = this.handleSearchBarChange.bind(this);
+    this.handleSearchBarSCSSIcon = this.handleSearchBarSCSSIcon.bind(this);
+    this.handleSearchBarHtmlIcon = this.handleSearchBarHtmlIcon.bind(this);
   }
-
-  // '/css-layout-01-video-01-06/css-layout-01.css': {
-  //   lebel: 'css-layout-01.css',
-  //   path: '/css-layout-01-video-01-06/css-layout-01.css',
-  //   type: 'file',    
-  //   content: 'CSS Layout video 01'
-  // },
-
 
   toOptions(data) {
     let options = [];
@@ -50,19 +50,67 @@ class App extends Component {
    *    "content": "HTML Layout video 03"
    * }
    */
-  onSideBarSelect(node) {
+  onSideBarSelect(node) {    
+    this.setViews(node)
     this.setState({node});
-    console.log('APP:', JSON.stringify(node, undefined, 2));
   }
 
   handleSearchBarChange(optionSelected) {
-    this.setState({
-      node: {
+    const node = {
         lebel: utils.basename(optionSelected.value),
         path: optionSelected.value,
         type: 'file',
         content: utils.basename(optionSelected.value)
-    }});    
+    }
+    this.setViews(node);
+    this.setState({node});    
+  }
+
+  setViews(node) {
+    let views = {left: this.state.views.left, right: this.state.views.right};
+    
+    views.right = 'htmlRendered';
+    if (node.path.endsWith('.html')) {
+      views.left = 'htmlCode';
+    } 
+
+    if (node.path.endsWith('.css') || node.path.endsWith('.scss')) {
+      views.left = 'cssCode';      
+    } 
+    this.setState({views});
+  }
+
+  handleSearchBarSCSSIcon(node) {
+    this.handleSearchBarHtmlIcon(node);
+  }
+
+  handleSearchBarHtmlIcon(node) {
+
+    let views = {left: this.state.views.left, right: this.state.views.right};
+            
+    if (views.left === 'htmlCode' && views.right === 'htmlRendered') {
+      views.right = 'cssCode';
+      this.setState({views});    
+      return 
+    } 
+
+    if (views.left === 'htmlCode' && views.right === 'cssCode') {
+      views.right = 'htmlRendered';
+      this.setState({views});    
+      return 
+    } 
+
+    if (views.left === 'cssCode' && views.right === 'htmlRendered') {
+      views.right ='htmlCode';
+      this.setState({views});          
+      return 
+    } 
+
+    if (views.left === 'cssCode' && views.right === 'htmlCode') {
+      views.right = 'htmlRendered';
+      this.setState({views});          
+      return 
+    }     
   }
 
   render() {    
@@ -72,7 +120,13 @@ class App extends Component {
         <div className="sidebar-main-container">
           <SplitPane split="vertical" minSize={50} defaultSize={275}>
             <SideBar className="sizebar" data={data} onSelect={this.onSideBarSelect}/>
-            <Main node={this.state.node} options={this.toOptions(data)} onSearchBarChange={this.handleSearchBarChange}/>
+            <Main 
+              node={this.state.node} 
+              options={this.toOptions(data)} 
+              views={this.state.views}
+              onSearchBarChange={this.handleSearchBarChange}
+              onSearchBarHtmlIcon={this.handleSearchBarHtmlIcon}
+            />
           </SplitPane>
         </div>     
       </React.Fragment>

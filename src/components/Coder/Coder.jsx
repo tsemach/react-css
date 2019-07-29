@@ -23,7 +23,7 @@ class Coder extends React.Component {
     return (
       <div className="coder scrollable">
         <pre className="line-numbers">
-          <code className="language-javascript">      
+          <code className={"language-"+language}>      
           {code}
           </code>
         </pre>        
