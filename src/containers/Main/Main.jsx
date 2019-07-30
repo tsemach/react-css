@@ -9,7 +9,7 @@ import Coder from '../../components/Coder';
 import Note from '../../components/Note'
 
 import './Main.scss';
- 
+
 const MainRightSide = (props) => {
    const { html, htmlCode, stylesheet, fullpath, views , language } = props;
 
@@ -52,13 +52,13 @@ class Main extends React.Component {
       let response, code;
 
       const fullpath = '/videos' + node.path;
-      response = await fetch('http://127.0.0.1:1234' + fullpath)
+      response = await fetch(Config.publicUrl + fullpath)
       code = await response.text();
       
       let codeStylesheet = '';
       if (fullpath.endsWith('.html')) {
         const { html, stylesheet } = renderHtml(code);
-        response = await fetch('http://127.0.0.1:1234' + stylesheet.content)     
+        response = await fetch(Config.publicUrl + stylesheet.content)     
         codeStylesheet = await response.text();
 
         this.setState({code, html, stylesheet: codeStylesheet, path: node.path, fullpath});
@@ -69,8 +69,9 @@ class Main extends React.Component {
       if (fullpath.endsWith('.css') || fullpath.endsWith('.scss')) {
         const htmlFile = '/videos' + code.split('\n')[0].split(' ')[2];
    
+        console.log('MAIN: htmlFile:', htmlFile);
         if (htmlFile.endsWith('.html')) {
-          response = await fetch('http://127.0.0.1:1234' + htmlFile)
+          response = await fetch(Config.publicUrl + htmlFile)
           
           const htmlCode = await response.text();
           const { html } = renderHtml(htmlCode);
@@ -79,7 +80,8 @@ class Main extends React.Component {
 
           return;
         }
-        this.setState({code, html, stylesheet: code, htmlCode: '', path: node.path, fullpath});
+        console.log("MAIN:", fullpath)
+        this.setState({code, html: '', stylesheet: code, htmlCode: '', path: node.path, fullpath});
       }
     }
   }

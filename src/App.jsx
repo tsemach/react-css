@@ -13,6 +13,9 @@ import Header from './components/Header';
 import SideBar from './components/SideBar';
 import Main from './containers/Main';
 
+
+console.log("APP: ENV:", process.env.REACT_APP_PUBLIC_URL)
+
 /**
  * state: 
  *  view: 

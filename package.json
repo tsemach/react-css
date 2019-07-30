@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html videos/**/*",
+    "start": "npx parcel index.html videos/**/*",
+    "build": "NODE_ENV=production npx parcel build index.html --public-url ./ videos/**/*; cp -r videos/ dist/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -15,6 +16,7 @@
     "@types/prismjs": "^1.16.0",
     "babel-polyfill": "^6.26.0",
     "fetch": "^1.1.0",
+    "http-server": "^0.11.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
     "prismjs": "^1.16.0",
