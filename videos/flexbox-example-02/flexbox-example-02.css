@@ -1,0 +1,40 @@
+/** html: /flexbox-example-02/flexbox-example-02.html **/
+
+html, body {
+    height:100%;
+    margin:0;
+}
+
+.main-container {
+    height:100%;
+    display:flex;
+    /* display: -webkit-flex; */
+    /* flex-direction: row; */
+    /* -webkit-flex-direction: row; */
+    /* -webkit-align-content: stretch; */
+    align-content: stretch;
+}
+
+.left {
+    background-color:lightgreen;
+    /*width: 100px; */  
+    flex-basis: 10%;
+}
+
+.right {
+    background-color: red;
+    -webkit-flex: 1;
+    flex:1;
+    position: relative;
+}
+
+.child {
+    background-color:steelblue;
+    position: absolute;
+    width:100%;
+    height:100%;    
+}
+
+.scrollable {
+     overflow-y: auto;
+}

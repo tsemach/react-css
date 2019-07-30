@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,UAEE,QAAS,CACT,eAAgB,CAGlB,MAEE,QAAS","file":"react-css.420d3eb7.css","sourceRoot":"..","sourcesContent":["html, body {\n  // height: 100%;\n  margin: 0; \n  overflow: hidden;\n}\n\n#root {\n  // height: 100%;\n  margin: 0; \n}\n\n"]}
