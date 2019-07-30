@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
 
   handleLaunch(node) {
     if (node.path) {
-      openInNewTab('/videos' + node.path)
+      openInNewTab(Config.getUrlPath + '/videos' + node.path)
     }
   }      
 

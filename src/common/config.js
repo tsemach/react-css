@@ -18,6 +18,13 @@ class Config {
     }
     return process.env.REACT_APP_PUBLIC_URL
   }
+
+  get getUrlPath() {
+    if ( ! process.env.REACT_APP_URL_PATH ) {
+      return '';
+    }
+    return process.env.REACT_APP_URL_PATH
+  }
 }
 
 export default new Config();
