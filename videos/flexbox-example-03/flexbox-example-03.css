@@ -1,0 +1,52 @@
+/** html: /flexbox-example-03/flexbox-example-03.html **/
+
+html, body {
+    height:100%;
+    margin:0;
+}
+
+.header {
+    background-color: cadetblue;
+    height: 5%;
+    text-align: center
+}
+
+.app {
+    height:95%;
+    display:flex;
+    align-content: stretch;    
+}
+
+.side-bar {
+    background-color:lightgreen;
+    flex-basis: 10%;    
+}
+
+.main {
+    background-color: aquamarine;    
+    flex-basis: 90%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar-container {
+    background-color:red;
+    flex-basis: 4%;
+    display: flex;
+}
+
+.search-bar {
+    margin: auto;
+    text-align: center;
+}
+
+.note {
+    background-color:steelblue;
+    flex-basis: 96%;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
