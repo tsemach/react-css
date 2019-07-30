@@ -1,0 +1,74 @@
+/** html: /flexbox-example-06/flexbox-example-06.html **/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {  
+  height: 50px;
+}
+
+.menu {
+  color: #fff;
+  background-color: #5995DA;  /* Blue */  
+  border: 1px solid #000;  /* For debugging */
+  position: fixed;  
+  width: 100%; 
+  height: 50px;   
+  display: flex;
+  justify-content: space-around;    /* Add this */  
+  align-items: center;
+}
+
+.links {
+  margin: 5px 20px; 
+  border: 1px solid #fff;  
+  display: flex; 
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;  
+}
+
+.header {
+  width: 900px;
+  /* height: 200px;     */
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+}
+
+.social,
+.logo,
+.subscribe {    
+  border: 1px solid #5995DA;
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
