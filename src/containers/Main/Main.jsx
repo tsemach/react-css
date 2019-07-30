@@ -68,8 +68,7 @@ class Main extends React.Component {
 
       if (fullpath.endsWith('.css') || fullpath.endsWith('.scss')) {
         const htmlFile = '/videos' + code.split('\n')[0].split(' ')[2];
-   
-        console.log('MAIN: htmlFile:', htmlFile);
+           
         if (htmlFile.endsWith('.html')) {
           response = await fetch(Config.publicUrl + htmlFile)
           

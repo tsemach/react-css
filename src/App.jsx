@@ -14,7 +14,7 @@ import SideBar from './components/SideBar';
 import Main from './containers/Main';
 
 
-console.log("APP: ENV:", process.env.REACT_APP_PUBLIC_URL)
+console.log("[APP] logo issue PUBLIC_URL:", process.env.REACT_APP_PUBLIC_URL)
 
 /**
  * state: 

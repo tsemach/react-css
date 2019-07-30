@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx parcel index.html videos/**/*",
-    "build": "NODE_ENV=production npx parcel build index.html --public-url ./ videos/**/*; cp -r videos/ dist/",
+    "build": "NODE_ENV=production npx parcel build index.html --public-url ./ videos/**/*; scripts/prd-post-build.sh",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
