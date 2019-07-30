@@ -5,6 +5,7 @@ import { FaFile, FaFolder, FaFolderOpen, FaChevronDown, FaChevronRight, FaHtml5,
 import { openInNewTab } from '../../common/utils';
 import { MdLaunch, MdCode } from 'react-icons/md';
 import { IoLogoCss3 } from 'react-icons/io'
+import Config from '../../common/config';
 
 import './SearchBar.scss';
 
