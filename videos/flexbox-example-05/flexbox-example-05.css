@@ -1,0 +1,73 @@
+/** html: /flexbox-example-05/flexbox-example-05.html **/
+
+html, body {
+    height:100%;
+    margin:0;
+}
+
+.header-container {
+    background-color: cadetblue;
+    height: 5%;
+    text-align: center;
+    display: flex;
+}
+
+.header {
+    margin: auto;
+}
+
+.sidebar-main-container {
+    height: 95%;
+    display: flex;
+    align-content: stretch;    
+}
+
+.side-bar {
+    background-color:lightgreen;
+    flex-basis: 10%;    
+}
+
+.main {
+    background-color: aquamarine;    
+    flex-basis: 90%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.searchbar-container {
+    background-color:red;
+    flex-basis: 8%;
+    display: flex;
+}
+
+.searchbar {
+    margin: auto;
+    text-align: center;
+}
+
+.code-note-container {
+    background-color: darkblue;
+    flex-basis: 92%;    
+    display: flex;    
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.code {
+    background-color:steelblue;
+    flex: 1; 
+    /* flex-basis: 2%; */
+}
+
+.note {
+    background-color: darkolivegreen;
+    flex: 1;
+    /* flex-basis: 2%; */
+    font-size: 2em;
+}
+
+.scrollable {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
